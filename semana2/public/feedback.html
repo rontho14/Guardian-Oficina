@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Comfort Kitchen - Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🍖 Southern Comfort Kitchen</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="images.html" class="nav-link">Recipe Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="feedback.html" class="nav-link active">Reviews</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h1>Recipe Reviews</h1>
+                <p>Share your cooking experience, ask questions, or tell us about your favorite dishes</p>
+            </header>
+
+            <section class="feedback-section">
+                <div class="feedback-container">
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group">
+                            <label for="author">Name (Optional)</label>
+                            <input type="text" id="author" name="author" placeholder="Your name or leave anonymous">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Review *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell us about your cooking experience! Did you try one of our recipes? How did it turn out? Any tips or modifications you made?" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Review Type</label>
+                            <select id="category" name="category">
+                                <option value="general">General Review</option>
+                                <option value="recipe">Recipe Review</option>
+                                <option value="question">Cooking Question</option>
+                                <option value="tip">Cooking Tip</option>
+                                <option value="request">Recipe Request</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">Submit Review</span>
+                            <span class="button-loading" style="display: none;">Submitting...</span>
+                        </button>
+                    </form>
+
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <h3>✅ Review Submitted Successfully!</h3>
+                        <p>Thank you for sharing your experience! Your review helps other home cooks discover great recipes.</p>
+                        <button id="sendAnother" class="secondary-button">Write Another Review</button>
+                    </div>
+
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <h3>❌ Error Submitting Review</h3>
+                        <p id="errorText">Something went wrong. Please try again.</p>
+                        <button id="retryButton" class="secondary-button">Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-feedback">
+                <h2>Recent Reviews</h2>
+                <div id="feedbackList" class="feedback-list">
+                    <div class="loading-placeholder">
+                        <p>Loading recent reviews...</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Southern Comfort Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="feedback.js"></script>
+</body>
+</html>
